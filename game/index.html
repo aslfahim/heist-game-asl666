@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Opera House Caper — a heist game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #120a18; height: 100%; }
+  body {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: Georgia, 'Times New Roman', serif; color: #f5e9c8;
+  }
+  #wrap { text-align: center; }
+  h1 { margin: 0 0 6px; font-size: 26px; color: #f2c14e; letter-spacing: 2px; }
+  p.sub { margin: 0 0 10px; font-size: 13px; color: #c9b48a; font-style: italic; }
+  canvas {
+    display: block; width: 1280px; height: 800px; max-width: 96vw; max-height: 82vh;
+    background: #1a0f22; border: 3px solid #d9a441; border-radius: 6px;
+    box-shadow: 0 0 40px rgba(217, 164, 65, 0.25);
+  }
+  p.keys { margin: 10px 0 0; font-size: 13px; color: #c9b48a; }
+  #status { margin: 4px 0 0; font-size: 12px; color: #8a7a5a; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>THE OPERA HOUSE CAPER</h1>
+  <p class="sub">Steal the prima donna&rsquo;s jewels, the Stradivarius and the box-office safe — then slip out the stage door.</p>
+  <canvas id="game" width="1280" height="800"></canvas>
+  <p class="keys">WASD / arrows move &nbsp;·&nbsp; SHIFT run &nbsp;·&nbsp; C costume disguise &nbsp;·&nbsp; E grab loot &nbsp;·&nbsp; M mute &nbsp;·&nbsp; R restart</p>
+  <p id="status" role="status" aria-live="polite">Press ENTER or click the stage to begin the heist.</p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
